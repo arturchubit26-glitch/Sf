@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: music-remix-bot
+    runtime: docker
+    plan: free
+    healthCheckPath: /
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: PUBLIC_URL
+        sync: false
+      - key: MAX_MB
+        value: "25"
